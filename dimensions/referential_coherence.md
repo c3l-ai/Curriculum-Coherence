@@ -1,6 +1,6 @@
 # Referential coherence
 
-## 2. Referential coherence
+##  Referential coherence
 
 Evaluate the referential coherence of the generation. Assign 1 if the utterance uses accurate, appropriate, and meaningful disciplinary references—including terminology, analogies, or metaphors that reflect accepted ways of talking about the domain—and does not introduce misleading, off‑topic, or distorting references. Assign 0 otherwise.
 
