@@ -1,6 +1,6 @@
 # Avoidance of fragmentation
 
-## 6. Avoidance of fragmentation
+##  Avoidance of fragmentation
 
 Evaluate the avoidance of fragmentation in the generation. Assign 1 if the utterance maintains thematic and topical continuity—fitting naturally within the ongoing conversation or learning sequence without abrupt, unrelated shifts. Assign 0 otherwise.
 
