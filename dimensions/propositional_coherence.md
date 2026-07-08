@@ -1,6 +1,6 @@
 # Propositional coherence
 
-## 1. Propositional coherence
+##  Propositional coherence
 
 Evaluate the propositional coherence of the generation. Assign 1 if the utterance builds meaningfully upon prior ideas or turns in a way that reinforces or advances the learner's understanding—maintaining topical continuity, logical flow, and conceptual progression without contradicting earlier information. Assign 0 otherwise.
 
