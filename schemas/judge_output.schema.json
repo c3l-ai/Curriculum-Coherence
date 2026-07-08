@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Curriculum Coherence Judge Output",
+  "type": "object",
+  "required": ["scores"],
+  "properties": {
+    "scores": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "items": {
+        "type": "integer",
+        "enum": [0, 1]
+      },
+      "description": "Binary scores in the order [PC, RC, RF, SC, VF, AF, DA, DPA]."
+    },
+    "reasoning": {
+      "type": "string",
+      "description": "Optional short explanation for the scores."
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Curriculum Coherence Evaluation Case",
+  "type": "object",
+  "required": ["conversation_history", "learner_turn", "agent_turn"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Optional stable identifier for the evaluation case."
+    },
+    "conversation_history": {
+      "type": "string",
+      "description": "Prior dialogue context available to the judge."
+    },
+    "learner_turn": {
+      "type": "string",
+      "description": "The learner's current message."
+    },
+    "agent_turn": {
+      "type": "string",
+      "description": "The AI tutor response to evaluate."
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Optional additional metadata such as subject, lesson, learner level, or knowledge graph node."
+    }
+  },
+  "additionalProperties": false
+}
