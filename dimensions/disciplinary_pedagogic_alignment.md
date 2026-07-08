@@ -1,6 +1,6 @@
 # Disciplinary–pedagogic alignment
 
-## 8. Disciplinary–pedagogic alignment
+##  Disciplinary–pedagogic alignment
 
 Evaluate the disciplinary–pedagogic alignment of the generation. Assign 1 if the response aligns with how the discipline builds knowledge and supports pedagogically sound scaffolding; assign 0 otherwise.
 
