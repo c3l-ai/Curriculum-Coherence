@@ -6,24 +6,47 @@ This repository operationalises eight interaction-level curriculum coherence dim
 
 ---
 
-## Curriculum Coherence Framework
+# Curriculum Coherence Framework
 
 <p align="center">
   <img src="assets/coherence_framework.jpg" alt="Curriculum Coherence Framework" width="850"/>
 </p>
 
-The Curriculum Coherence Framework conceptualises curriculum coherence across four complementary components:
+The Curriculum Coherence Framework conceptualises curriculum coherence through four complementary components:
 
-- **Coherence** captures whether an instructional interaction is conceptually connected through **Propositional**, **Sequential**, and **Referential Coherence**.
-- **Pedagogical Manoeuvres** shape coherence through **Disciplinary Anchoring (DA)** and **Disciplinary-Pedagogic Alignment (DPA)**.
-- **Fragmentation & Repair** evaluates whether instructional breakdowns are avoided or successfully repaired through **Fragmentation Avoidance (AF)** and **Fragmentation Repair (RF)**.
-- **Violation Flag (VF)** identifies interactions that contain disruptive, contradictory, or epistemically unrelated content.
+### Pedagogical Manoeuvres
+
+Pedagogical manoeuvres are instructional operations that actively shape discourse coherence during an educational interaction.
+
+- **Disciplinary-Pedagogic Alignment (DPA)**
+- **Disciplinary Anchoring (DA)**
+
+### Coherence
+
+Coherence represents the central construct of the framework and captures whether an instructional interaction develops as a logically connected learning experience.
+
+- **Propositional Coherence (PC)**
+- **Sequential Coherence (SC)**
+- **Referential Coherence (RC)**
+
+### Fragmentation & Repair
+
+Fragmentation and repair capture how conversational breakdowns are prevented or repaired when coherence is disrupted.
+
+- **Fragmentation Avoidance (AF)**
+- **Fragmentation Repair (RF)**
+
+### Violation Flag
+
+Violation Flag identifies responses containing disruptive, contradictory, or epistemically unrelated content that falls outside the intended instructional discourse.
+
+- **Violation Flag (VF)**
 
 ---
 
-## What this repository evaluates
+# What this repository evaluates
 
-Most chatbot evaluation suites focus on broad properties such as factuality, helpfulness, safety, or toxicity.
+Most chatbot evaluation frameworks assess broad properties such as factuality, helpfulness, safety, or toxicity.
 
 **Curriculum Coherence Evals** instead evaluates whether an educational AI response is coherent from a curriculum perspective.
 
@@ -40,15 +63,17 @@ Specifically, it evaluates whether an AI response:
 
 ---
 
-## Repository structure
+# Repository structure
 
 ```text
 curriculum-coherence-evals/
 │
 ├── README.md
 ├── LICENSE
+├── .gitignore
 ├── CITATION.cff
 ├── references.bib
+│
 ├── assets/
 │   └── coherence_framework.jpg
 │
@@ -58,11 +83,11 @@ curriculum-coherence-evals/
 │   └── references.md
 │
 ├── dimensions/
-│   ├── propositional_coherence.md
-│   ├── referential_coherence.md
-│   ├── sequential_coherence.md
-│   ├── disciplinary_anchoring.md
 │   ├── disciplinary_pedagogic_alignment.md
+│   ├── disciplinary_anchoring.md
+│   ├── propositional_coherence.md
+│   ├── sequential_coherence.md
+│   ├── referential_coherence.md
 │   ├── avoidance_of_fragmentation.md
 │   ├── repair_of_fragmentation.md
 │   └── violation_flag.md
@@ -86,7 +111,7 @@ curriculum-coherence-evals/
 
 ---
 
-## Input format
+# Input format
 
 Each evaluation case contains three fields:
 
@@ -100,30 +125,28 @@ Each evaluation case contains three fields:
 
 ---
 
-## Output format
+# Output format
 
-The combined evaluation prompt returns an eight-element binary vector:
+The combined evaluation prompt returns an eight-element binary vector.
 
 ```json
-[1,1,0,1,0,1,1,1]
+[1,1,1,1,1,1,1,0]
 ```
 
-The output dimensions are ordered as follows:
+The dimensions are grouped conceptually according to the Curriculum Coherence Framework:
 
-| Position | Dimension |
-|----------:|-----------|
-| 1 | Propositional Coherence |
-| 2 | Referential Coherence |
-| 3 | Repair of Fragmentation |
-| 4 | Sequential Coherence |
-| 5 | Violation Flag |
-| 6 | Avoidance of Fragmentation |
-| 7 | Disciplinary Anchoring |
-| 8 | Disciplinary-Pedagogic Alignment |
+| Framework Component | Dimensions |
+|--------------------|------------|
+| **Pedagogical Manoeuvres** | Disciplinary-Pedagogic Alignment (DPA), Disciplinary Anchoring (DA) |
+| **Coherence** | Propositional Coherence (PC), Sequential Coherence (SC), Referential Coherence (RC) |
+| **Fragmentation & Repair** | Fragmentation Avoidance (AF), Fragmentation Repair (RF) |
+| **Violation** | Violation Flag (VF) |
+
+> **Note:** The exact ordering of the binary output vector is defined by the evaluation prompt being used (e.g., `curriculum_coherence_judge.md`) and should be interpreted according to that prompt.
 
 ---
 
-## Quick start
+# Quick start
 
 Render a prompt for a sample evaluation case:
 
@@ -146,18 +169,18 @@ python utils/render_prompt.py \
 Parse a model response:
 
 ```bash
-python utils/parse_output.py --text "[1,1,0,1,0,1,1,1]"
+python utils/parse_output.py --text "[1,1,1,1,1,1,1,0]"
 ```
 
 or
 
 ```bash
-echo "[1,1,0,1,0,1,1,1]" | python utils/parse_output.py
+echo "[1,1,1,1,1,1,1,0]" | python utils/parse_output.py
 ```
 
 ---
 
-## Intended use
+# Intended use
 
 Curriculum Coherence Evals is intended for researchers and practitioners developing or evaluating:
 
@@ -177,9 +200,9 @@ Typical use cases include:
 
 ---
 
-## Theoretical foundations
+# Theoretical foundations
 
-This repository is informed by three complementary research areas:
+This repository is informed by three complementary areas of research:
 
 - **Curriculum Design Coherence**, particularly the Curriculum Design Coherence (CDC) model.
 - **Computed Curriculum**, including curriculum knowledge graph and AI-driven curriculum modelling.
@@ -189,12 +212,12 @@ A curated list of foundational references is provided in [`framework/references.
 
 ---
 
-## Citation
+# Citation
 
-If you use this repository, please cite the repository. A citation to the accompanying publication will be added once available.
+If you use this repository, please cite the repository. A citation to the accompanying publication will be added following publication.
 
 ---
 
-## License
+# License
 
 Released under the MIT License.
