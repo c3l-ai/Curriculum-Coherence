@@ -1,6 +1,6 @@
 # Violation flag
 
-## 5. Violation flag
+##  Violation flag
 
 Does the agent's turn introduce disruptive, confusing, or epistemically unrelated content that breaks the curricular or pedagogic flow? Assign 1 if a clear violation occurs; assign 0 otherwise.
 
