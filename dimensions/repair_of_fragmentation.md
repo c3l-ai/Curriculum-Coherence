@@ -1,6 +1,6 @@
 # Repairs of fragmentation
 
-## 3. Repairs of fragmentation.
+##  Repairs of fragmentation.
 
 Evaluate whether the agent's turn repairs a prior fragmentation in the conversation. Assign 1 if the turn effectively restores coherence (returns to the learner's question/topic, clarifies a confusion, or re‑establishes the intended pedagogic/disciplinary path). Assign 0 otherwise.
 
