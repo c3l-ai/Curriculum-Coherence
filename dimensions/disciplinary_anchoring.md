@@ -1,6 +1,6 @@
 # Disciplinary anchoring
 
-## 7. Disciplinary anchoring
+##  Disciplinary anchoring
 Evaluate the disciplinary anchoring of the generation. Assign 1 if the agent's turn is clearly grounded in a identifiable disciplinary concept—explicitly defining, explaining, applying, or probing a specific topic within the subject domain. Assign 0 otherwise.
 
 Goal: Determine whether the turn has a clear conceptual focus within the discipline, rather than being purely meta‑pedagogic (e.g., "Let's summarize"), social/chit‑chat, or too vague to be tied to any specific concept.
