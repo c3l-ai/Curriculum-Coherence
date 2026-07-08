@@ -1,6 +1,6 @@
 # Sequential Coherence
 
-## 4. Sequential Coherence
+##  Sequential Coherence
 
 Evaluate whether the agent's turn follows a logical curricular order. Assign 1 if the turn respects prerequisite sequencing (as implied by the conversation and/or knowledge graph) and avoids premature jumps to advanced or unrelated content. Assign 0 otherwise.
 
